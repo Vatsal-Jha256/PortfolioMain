@@ -116,15 +116,16 @@
   align-items: center;
   gap: 20px;
   padding: 20px 25px;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.08);
   border-radius: 15px;
   text-decoration: none;
   color: #ffffff;
   transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.15);
   position: relative;
   overflow: hidden;
-  min-height: 60px;
+  min-height: 70px;
+  backdrop-filter: blur(10px);
 }
 
 .social-link::before {
@@ -134,7 +135,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
   transition: left 0.5s ease;
 }
 
@@ -143,31 +144,52 @@
 }
 
 .social-link:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-3px);
   border-color: var(--social-color, #667eea);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3), 0 0 20px var(--social-color, #667eea);
+}
+
+.social-link[style*="--social-color: #0077b5"]:hover {
+  box-shadow: 0 12px 35px rgba(0, 119, 181, 0.4), 0 0 20px #0077b5;
+}
+
+.social-link[style*="--social-color: #333"]:hover {
+  box-shadow: 0 12px 35px rgba(51, 51, 51, 0.4), 0 0 20px #666;
+}
+
+.social-link[style*="--social-color: #4285f4"]:hover {
+  box-shadow: 0 12px 35px rgba(66, 133, 244, 0.4), 0 0 20px #4285f4;
 }
 
 .social-icon {
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   background: var(--social-color, #667eea);
-  border-radius: 12px;
+  border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   flex-shrink: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.social-link:hover .social-icon {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 .social-name {
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   flex: 1;
   text-align: left;
   white-space: nowrap;
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .cta-section {
@@ -176,6 +198,7 @@
   border-radius: 15px;
   padding: 30px;
   margin-top: 30px;
+  backdrop-filter: blur(10px);
 }
 
 .cta-section h4 {
@@ -196,6 +219,13 @@
   gap: 10px;
   padding: 12px 25px;
   font-size: 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
 }
 
 .cta-button:hover {
@@ -228,8 +258,21 @@
   }
   
   .social-icon {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  
+  .social-name {
     font-size: 1rem;
+  }
+  
+  .social-links {
+    gap: 15px;
+  }
+  
+  .social-link {
+    padding: 15px 20px;
+    min-height: 60px;
   }
 } 

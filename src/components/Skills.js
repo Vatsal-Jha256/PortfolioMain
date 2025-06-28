@@ -111,6 +111,7 @@ const Skills = () => {
           </div>
 
           <motion.div
+            id="certifications"
             className="certifications-section"
             initial={{ opacity: 0, y: 50 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
