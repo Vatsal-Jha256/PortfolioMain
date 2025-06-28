@@ -58,16 +58,6 @@ const Skills = () => {
     }
   ];
 
-  const certifications = [
-    "HuggingFace DeepRL",
-    "Generative AI with LLMs",
-    "Machine Learning A-Z",
-    "Reinforcement Learning - IITM",
-    "AI for Investment - IITK",
-    "Quantum Computing - IBM & IITM",
-    "Responsible & Safe AI Systems"
-  ];
-
   return (
     <section id="skills" className="section skills">
       <div className="container">
