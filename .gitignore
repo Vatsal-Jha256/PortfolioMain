@@ -110,4 +110,7 @@ Desktop.ini
 .idea/
 *.swp
 *.swo
-*~ 
+*~
+
+# History directory (VSCode/Cursor)
+.history/ 
