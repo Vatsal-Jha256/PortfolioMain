@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGithub } from 'react-icons/fa';
-import { SiGooglescholar } from 'react-icons/si';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import './Contact.css';
 
 const Contact = () => {
@@ -29,27 +28,6 @@ const Contact = () => {
       label: "Location",
       value: "Vellore, India",
       link: null
-    }
-  ];
-
-  const socialLinks = [
-    {
-      icon: <FaLinkedin />,
-      name: "LinkedIn",
-      url: "https://www.linkedin.com/in/vatsal-jha-6a669724b/",
-      color: "#0077b5"
-    },
-    {
-      icon: <FaGithub />,
-      name: "GitHub",
-      url: "https://github.com/Vatsal-Jha256",
-      color: "#333"
-    },
-    {
-      icon: <SiGooglescholar />,
-      name: "Google Scholar",
-      url: "https://scholar.google.com/citations?user=o9ErjT4AAAAJ&hl=en",
-      color: "#4285f4"
     }
   ];
 
@@ -112,29 +90,8 @@ const Contact = () => {
             >
               <div className="contact-card card">
                 <h3>Quick Message</h3>
-                <p>Want to send a quick message? Use the links below or drop me an email directly!</p>
+                <p>Want to send a quick message? Drop me an email directly!</p>
                 
-                <div className="social-links">
-                  {socialLinks.map((social, index) => (
-                    <motion.a
-                      key={index}
-                      href={social.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="social-link"
-                      style={{ '--social-color': social.color }}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={inView ? { opacity: 1, scale: 1 } : {}}
-                      transition={{ duration: 0.5, delay: 0.6 + 0.1 * index }}
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <div className="social-icon">{social.icon}</div>
-                      <span className="social-name">{social.name}</span>
-                    </motion.a>
-                  ))}
-                </div>
-
                 <motion.div
                   className="cta-section"
                   initial={{ opacity: 0, y: 20 }}

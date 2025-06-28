@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaEnvelope, FaDownload } from 'react-icons/fa';
-import { SiGooglescholar } from 'react-icons/si';
+import { FaDownload } from 'react-icons/fa';
 import './Hero.css';
 
 const Hero = () => {
@@ -82,7 +81,7 @@ const Hero = () => {
               Get In Touch
             </button>
             <a 
-              href="/resume.pdf" 
+              href="https://drive.google.com/uc?export=download&id=1WTfaQC1qQVb9R239xTbGxehsOClhHw11" 
               className="btn-secondary"
               target="_blank"
               rel="noopener noreferrer"
@@ -97,35 +96,20 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="hero-social"
           >
-            <a 
-              href="https://github.com/Vatsal-Jha256" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="social-link"
-            >
-              <FaGithub />
+            <a href="https://github.com/Vatsal-Jha256" target="_blank" rel="noopener noreferrer" className="social-link-text">
+              GitHub
             </a>
-            <a 
-              href="https://www.linkedin.com/in/vatsal-jha-6a669724b/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="social-link"
-            >
-              <FaLinkedin />
+            <a href="https://www.linkedin.com/in/vatsal-jha-6a669724b/" target="_blank" rel="noopener noreferrer" className="social-link-text">
+              LinkedIn
             </a>
-            <a 
-              href="https://scholar.google.com/citations?user=o9ErjT4AAAAJ&hl=en" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="social-link"
-            >
-              <SiGooglescholar />
+            <a href="https://scholar.google.com/citations?user=o9ErjT4AAAAJ&hl=en" target="_blank" rel="noopener noreferrer" className="social-link-text">
+              Google Scholar
             </a>
-            <a 
-              href="mailto:vatsaljha17@gmail.com" 
-              className="social-link"
-            >
-              <FaEnvelope />
+            <a href="mailto:vatsaljha17@gmail.com" className="social-link-text">
+              Email
+            </a>
+            <a href="https://leetcode.com/u/vatsaljha28/" target="_blank" rel="noopener noreferrer" className="social-link-text">
+              LeetCode
             </a>
           </motion.div>
         </div>
