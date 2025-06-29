@@ -66,7 +66,7 @@ const Hero = () => {
               <span className="cursor">|</span>
             </h2>
             <p className="hero-description">
-              3rd year undergraduate at VIT Vellore passionate about data science and machine learning. 
+              4th year undergraduate at VIT Vellore passionate about data science and machine learning. 
               I love building intelligent systems that unlock insights from data and solve real-world problems.
             </p>
           </motion.div>
